@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="{%static 'normalize.css'%}">
+  <link rel="stylesheet" href="{%static 'skeleton.css'%}">
+
+  <style>
+  a img
+  {
+    border: 0 none;
+  }
+  .image-link
+  {
+    text-decoration: none;
+  }
+  </style>
+
+  <title>ASAP</title>
+  
+</head>
+<body style="background:#f3f3f3; font-family: 'Lato', sans-serif;">
+    
+  <div class="container">
+    
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 2%;">
+        <h4 style="text-align: center; letter-spacing: 1.5px">Welcome To</h4>
+        <center><img src="{%static 'logo.png'%}" height=62.5px width=162.5px></center>
+
+        <!-- <h4 style="text-align: center">Connect with Our Founder <br><span style="font-size: 36px; letter-spacing: 1.5px"> Brett Tyler </span> </h4> -->
+        <h4 style="text-align: center; font-size: 32px; letter-spacing: 1.5px">{{profile.name}}</h4>
+        <center><img src="{%static 'profile.png'%}" height=115 width=115></center>
+        <center><img src="{%static 'phone.png'%}" height=19 width=19> <span style="font-family: 'Open Sans', sans-serif; font-size: 20px">&nbsp;{{profile.phone}}</span></center>
+        <center><img src="{%static 'mail.png'%}" height=17 width=25> <span style="font-family: 'Open Sans', sans-serif; font-size: 20px">&nbsp;<a href="mailto:{{profile.email}}">{{profile.email}}</a></span></center>
+        <br>
+        <center>
+        <a href="{{profile.facebook}}" class="image-link"><img src="{%static 'facebook.png'%}" height=60 width=60> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://twitter.com/{{profile.twitter}}"><img src="{%static 'twitter.png'%}" height=60 width=60></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{{profile.linkedin}}" class="image-link"><img src="{%static 'linkedin.png'%}" height=60 width=60> </a>
+        <p><br>
+        <a href="https://www.instagram.com/{{profile.instagram}}"><img src="{%static 'instagram.png'%}" height=60 width=60> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.snapchat.com/add/{{ profile.snapchat }}" class="image-link"><img src="{%static 'snapchat.png'%}" height=60 width=60> </a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.youtube.com/channel/UChegNfGBoZa9uH2sO28Q49A" class="image-link"><img src="{%static 'youtube.png'%}" height=60 width=60> </a> 
+        <p>
+        <img src="{%static 'download-on-appstore.png'%}" height=35% width=35%>
+        </center>
+        
+        
+      </div>
+    </div>    
+    
+  </div>
+
+</body>
+</html>
